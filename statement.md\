@@ -17,3 +17,46 @@ In today's fast-paced academic environment, students face significant challenges
 - Inability to plan for future expenses
 - Poor understanding of spending habits
 - Difficulty in saving money effectively
+
+## 🎯 Project Scope
+
+### In-Scope Features
+✅ **Core Expense Management**
+- Add new expenses with categorization
+- View complete expense history
+- Filter expenses by categories
+- Delete incorrect entries
+
+✅ **Analytics & Reporting**
+- Monthly spending summaries
+- Category-wise breakdowns
+- Visual percentage distributions
+- Expense trend analysis
+
+✅ **Data Management**
+- Automatic data persistence
+- JSON file-based storage
+- Error handling and validation
+- Data integrity maintenance
+
+✅ **User Experience**
+- Simple text-based interface
+- Intuitive menu navigation
+- Clear input validation
+- User-friendly feedback
+
+### Out-of-Scope Features
+❌ **Advanced Features** (Future Enhancements)
+- Multi-user support
+- Budget setting and alerts
+- Data export to external formats
+- Graphical user interface (GUI)
+- Mobile application
+- Cloud synchronization
+- Advanced reporting with charts
+
+❌ **Complex Integrations**
+- Bank account synchronization
+- Receipt scanning capabilities
+- Tax calculation features
+- Investment tracking
