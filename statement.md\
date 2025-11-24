@@ -60,3 +60,30 @@ In today's fast-paced academic environment, students face significant challenges
 - Receipt scanning capabilities
 - Tax calculation features
 - Investment tracking
+
+## 👥 Target Users
+
+### Primary Users
+**🎓 College Students**
+- **Age Group**: 18-25 years
+- **Technical Proficiency**: Basic computer literacy
+- **Financial Needs**: Pocket money management, expense tracking
+- **Usage Pattern**: Daily expense logging, monthly reviews
+
+### Secondary Users
+**💼 Young Professionals**
+- Entry-level employees managing first salaries
+- Individuals new to financial planning
+- People seeking simple expense tracking solutions
+
+**👨‍💻 Programming Beginners**
+- Students learning software development
+- Developers looking for reference projects
+- Individuals interested in Python applications
+
+### User Characteristics
+| User Type | Primary Need | Technical Level | Usage Frequency |
+|-----------|--------------|-----------------|-----------------|
+| **College Student** | Pocket money tracking | Basic | Daily |
+| **Young Professional** | Salary management | Intermediate | Weekly |
+| **Programming Student** | Learning reference | Intermediate | Occasional |
