@@ -80,6 +80,40 @@ class ExpenseTracker:
         print(f"Expense added successfully!")
         print(f"{description} - ₹{amount} - {category}")
 
+    def monthly_summary(self):
+        #Show monthly expense summary
+        print("\n--- Monthly Summary ---")  
+        if not self.expenses:
+            print("No expenses recorded yet!")
+            return  
+        # Group expenses by month
+        monthly_data={}
+        for expense in self.expenses:
+            # Extract year-month from date (format: YYYY-MM)
+            month_key=expense['date'][:7]  # Gets "YYYY-MM" 
+            if month_key not in monthly_data:
+                monthly_data[month_key]=[]
+            monthly_data[month_key].append(expense)       
+        # Display monthly summary
+        print(f"{'Month':<10} {'Total Expenses':<15} {'Number of Expenses':<20}")
+        print("-" * 50)    
+        for month, expenses_list in monthly_data.items():
+            total = sum(exp['amount'] for exp in expenses_list)
+            count = len(expenses_list)
+            print(f"{month:<10} ₹{total:<13.2f} {count:<20}")   
+        # Category-wise breakdown for current month
+        current_month=datetime.now().strftime("%Y-%m")
+        current_month_expenses = monthly_data.get(current_month,[])    
+        if current_month_expenses:
+            print(f"\nCategory-wise breakdown for {current_month}:")
+            category_totals = {}     
+            for expense in current_month_expenses:
+                category=expense['category']
+                category_totals[category]=category_totals.get(category, 0) + expense['amount']     
+            for category,total in category_totals.items():
+                percentage=(total/sum(category_totals.values()))*100
+                print(f"{category}: ₹{total:.2f} ({percentage:.1f}%)")
+
     def delete_expense(self):
         #Delete an expense by ID
         print("\n--- Delete Expense ---")   
