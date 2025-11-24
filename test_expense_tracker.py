@@ -30,3 +30,51 @@ def test_add_expense():
         if os.path.exists(test_file):
             os.unlink(test_file)
 
+def test_expense_categories():
+    #Test expense categories
+    print("Testing expense categories...")    
+    tracker = ExpenseTracker() 
+    # Check if default categories exist
+    expected_categories = ["Food","Transport","Entertainment","Shopping","Bills","Education","Health","Other"]
+    assert tracker.categories==expected_categories
+    assert len(tracker.categories)==8
+    print("Expense categories test passed!")
+
+def test_file_operations():
+    #Test saving and loading expenses
+    print("Testing file operations...")   
+    with tempfile.NamedTemporaryFile(mode='w',delete=False,suffix='.json') as f:
+        test_file=f.name  
+    try:
+        tracker=ExpenseTracker()
+        tracker.data_file = test_file   
+        # Add test expenses
+        test_expenses = [
+            {
+                'id': 1,
+                'description': 'Movie',
+                'amount': 300.0,
+                'category': 'Entertainment',
+                'date': '2025-11-25 18:00'
+            },
+            {
+                'id': 2,
+                'description': 'Bus Ticket',
+                'amount': 50.0,
+                'category': 'Transport',
+                'date': '2025-11-25 08:00'
+            }
+        ]    
+        tracker.expenses = test_expenses
+        tracker.save_expenses()  
+        # Create new tracker instance and load data
+        new_tracker=ExpenseTracker()
+        new_tracker.data_file=test_file
+        new_tracker.load_expenses()    
+        assert len(new_tracker.expenses)==2
+        assert new_tracker.expenses[0]['description']=='Movie'
+        assert new_tracker.expenses[1]['amount']==50.0
+        print("File operations test passed!")     
+    finally:
+        if os.path.exists(test_file):
+            os.unlink(test_file)
