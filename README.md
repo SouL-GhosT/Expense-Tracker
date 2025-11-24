@@ -50,3 +50,20 @@ A simple and effective expense tracking application built with Python, perfect f
 4. **Managing Data**:
     - Option 5: Delete specific expenses by ID
     - Data automatically saves after every operation
+
+## 🎯 Learning Objectives
+This project helps you learn:
+- Python programming fundamentals
+- File handling (JSON)
+- Data structures (lists, dictionaries)
+- User input validation
+- Basic error handling
+- Modular programming
+- Simple testing
+
+## 🤝 Contributing
+This is a learning project. Feel free to:
+- Add new features
+- Improve the code
+- Fix bugs
+- Enhance documentation
