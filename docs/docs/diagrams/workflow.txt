@@ -1,0 +1,41 @@
+SMART EXPENSE TRACKER WORKFLOW
+
+    Load Existing Expenses from JSON
+        ↓
+    Display Main Menu:
+    1. Add Expense
+    2. View All Expenses  
+    3. View by Category
+    4. Monthly Summary
+    5. Delete Expense
+    6. Exit
+        ↓
+    User Input → Validate Input
+        ↓
+    Execute Selected Operation:
+        ↓
+    ADD EXPENSE:
+        Get Description → Validate
+        Get Amount → Validate  
+        Show Categories → Get Choice
+        Save to List → Auto-save to File
+
+    VIEW EXPENSES:
+        Read from List → Format Display
+        Calculate Totals → Show Table
+
+    CATEGORY FILTER:
+        Show Categories → Get Choice
+        Filter Expenses → Display Filtered
+
+    MONTHLY SUMMARY:
+        Group by Month → Calculate Totals
+        Show Category Breakdown
+
+    DELETE EXPENSE:
+        Show All → Get ID → Find & Remove
+        Update IDs → Auto-save
+        ↓
+    Return to Main Menu
+        ↓
+    Exit: Save Data → Close Program
