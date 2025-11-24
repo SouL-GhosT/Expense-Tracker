@@ -80,4 +80,47 @@ class ExpenseTracker:
         print(f"Expense added successfully!")
         print(f"{description} - ₹{amount} - {category}")
 
+    def delete_expense(self):
+        #Delete an expense by ID
+        print("\n--- Delete Expense ---")   
+        if not self.expenses:
+            print("No expenses to delete!")
+            return       
+        self.view_all_expenses()
+        try:
+            expense_id=int(input("\nEnter expense ID to delete: "))
+        except ValueError:
+            print("Please enter a valid ID!")
+            return    
+        # Find and remove expense
+        for i,expense in enumerate(self.expenses):
+            if expense['id']==expense_id:
+                deleted_expense=self.expenses.pop(i)
+                # Update IDs for remaining expenses
+                for j in range(i,len(self.expenses)):
+                    self.expenses[j]['id']=j+1           
+                self.save_expenses()
+                print(f"Expense deleted: {deleted_expense['description']} - ₹{deleted_expense['amount']}")
+                return  
+        print("Expense ID not found!")
     
+    def save_expenses(self):
+        #Save expenses to JSON file
+        try:
+            # Create data directory if it doesn't exist
+            os.makedirs(os.path.dirname(self.data_file),exist_ok=True)         
+            with open(self.data_file,'w') as f:
+                json.dump(self.expenses,f,indent=2)
+        except Exception as e:
+            print(f"Error saving expenses: {e}")
+    
+    def load_expenses(self):
+        #Load expenses from JSON file
+        try:
+            if os.path.exists(self.data_file):
+                with open(self.data_file,'r') as f:
+                    self.expenses=json.load(f)
+        except Exception as e:
+            print(f"Error loading expenses: {e}")
+            self.expenses=[]
+  
