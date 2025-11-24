@@ -116,3 +116,29 @@ In today's fast-paced academic environment, students face significant challenges
 - Historical data comparison
 - Trend identification
 
+### 3. Data Analytics & Reporting
+**📊 Monthly Summaries**
+- Month-wise expense totals
+- Expense count tracking
+- Category distribution analysis
+- Percentage calculations
+
+**📈 Spending Insights**
+- Category-wise spending patterns
+- Monthly comparison capabilities
+- Budget adherence indicators
+- Financial habit analysis
+
+### 4. Data Persistence & Management
+**💾 Automatic Storage**
+- JSON-based data persistence
+- Automatic save on changes
+- Error-resistant file operations
+- Data backup mechanisms
+
+**🔧 Data Maintenance**
+- Expense deletion with ID verification
+- Automatic ID renumbering
+- Data integrity validation
+- Corruption recovery
+
