@@ -80,6 +80,53 @@ class ExpenseTracker:
         print(f"Expense added successfully!")
         print(f"{description} - ₹{amount} - {category}")
 
+    def view_all_expenses(self):
+        #Display all expenses
+        print("\n--- All Expenses ---") 
+        if not self.expenses:
+            print("No expenses recorded yet!")
+            return      
+        total = 0
+        print(f"{'ID':<4} {'Date':<16} {'Category':<15} {'Description':<20} {'Amount':<10}")
+        print("-" * 70)     
+        for expense in self.expenses:
+            print(f"{expense['id']:<4} {expense['date']:<16} {expense['category']:<15} {expense['description']:<20} ₹{expense['amount']:<8.2f}")
+            total += expense['amount']    
+        print("-"*70)
+        print(f"Total Expenses: ₹{total:.2f}")
+
+    def view_by_category(self):
+        #View expenses filtered by category
+        print("\n--- Expenses by Category ---")  
+        # Display categories
+        print("Categories:")
+        for i,category in enumerate(self.categories, 1):
+            print(f"{i}. {category}")  
+        try:
+            cat_choice=int(input("Choose category (1-8): "))
+            if 1<=cat_choice<=len(self.categories):
+                selected_category=self.categories[cat_choice-1]
+            else:
+                print("Invalid category choice!")
+                return
+        except ValueError:
+            print("Please enter a valid number!")
+            return
+        # Filter expenses by category
+        category_expenses = [exp for exp in self.expenses if exp['category']==selected_category]  
+        if not category_expenses:
+            print(f"No expenses found in category: {selected_category}")
+            return 
+        total = 0
+        print(f"\nExpenses in {selected_category}:")
+        print(f"{'ID':<4} {'Date':<16} {'Description':<20} {'Amount':<10}")
+        print("-" * 55)
+        for expense in category_expenses:
+            print(f"{expense['id']:<4} {expense['date']:<16} {expense['description']:<20} ₹{expense['amount']:<8.2f}")
+            total += expense['amount']
+        print("-"*5)
+        print(f"Total in {selected_category}: ₹{total:.2f}")
+
     def monthly_summary(self):
         #Show monthly expense summary
         print("\n--- Monthly Summary ---")  
