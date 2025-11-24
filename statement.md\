@@ -87,3 +87,32 @@ In today's fast-paced academic environment, students face significant challenges
 | **College Student** | Pocket money tracking | Basic | Daily |
 | **Young Professional** | Salary management | Intermediate | Weekly |
 | **Programming Student** | Learning reference | Intermediate | Occasional |
+
+## 🚀 High-Level Features
+
+### 1. Core Expense Management
+**📝 Add New Expenses**
+- Input validation for all fields
+- Categorized expense recording
+- Automatic timestamp generation
+- Duplicate prevention mechanisms
+
+**👀 View Expenses**
+- Complete expense listing
+- Formatted tabular display
+- Real-time total calculations
+- Chronological sorting
+
+### 2. Advanced Filtering & Search
+**🗂️ Category-Based Filtering**
+- Pre-defined expense categories
+- Dynamic category selection
+- Filtered total calculations
+- Empty state handling
+
+**📅 Time-Based Analysis**
+- Monthly expense aggregation
+- Current month focus
+- Historical data comparison
+- Trend identification
+
