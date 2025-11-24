@@ -78,3 +78,20 @@ def test_file_operations():
     finally:
         if os.path.exists(test_file):
             os.unlink(test_file)
+
+def run_all_tests():
+    #Run all tests
+    print("Running Smart Expense Tracker Tests...")
+    print("="*50)   
+    try:
+        test_add_expense()
+        test_expense_categories()
+        test_file_operations()    
+        print("="*50)
+        print("All tests passed! Your expense tracker is working correctly.")     
+    except Exception as e:
+        print(f"Test failed: {e}")
+        raise
+
+if __name__=="__main__":
+    run_all_tests()
