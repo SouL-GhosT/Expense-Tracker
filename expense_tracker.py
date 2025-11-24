@@ -124,3 +124,36 @@ class ExpenseTracker:
             print(f"Error loading expenses: {e}")
             self.expenses=[]
   
+    def run(self):
+        #Main program loop
+        print("Welcome to Smart Expense Tracker!")
+        print("Keep track of your daily expenses easily!")      
+        while True:
+            self.display_menu()
+            choice=self.get_user_choice()     
+            if choice==1:
+                self.add_expense()
+            elif choice==2:
+                self.view_all_expenses()
+            elif choice==3:
+                self.view_by_category()
+            elif choice==4:
+                self.monthly_summary()
+            elif choice==5:
+                self.delete_expense()
+            elif choice==6:
+                print("\nSaving your expenses...")
+                self.save_expenses()
+                print("Thank you for using Smart Expense Tracker!")
+                print("Goodbye!")
+                break
+            else:
+                if choice is not None:
+                    print("Invalid choice! Please enter 1-6.")         
+            # Wait for user to press Enter before continuing
+            input("\nPress Enter to continue...")
+
+# Main program execution
+if __name__=="__main__":
+    tracker=ExpenseTracker()
+    tracker.run()
