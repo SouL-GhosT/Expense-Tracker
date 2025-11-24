@@ -61,3 +61,115 @@ The Smart Expense Tracker is a Python-based application designed to help student
   - Git - Version control
   - Markdown - Documentation
 
+## 📦 Dependencies
+
+ ```python
+    # No external dependencies required!
+    # Uses only Python standard library:
+    import json
+    import os  
+    from datetime import datetime
+```
+
+## 🚀 Installation & Setup
+
+### Prerequisites
+
+  - ✅ Python 3.6 or higher installed
+  - ✅ Basic understanding of command line
+  - ✅ Text editor (VS Code recommended)
+
+### Step-by-Step Installation
+   
+#### 1. Download the Project
+ ```bash
+# Method 1: Clone repository (if using Git)
+git clone https://github.com/yourusername/expense-tracker.git
+cd expense-tracker
+
+# Method 2: Download ZIP file
+# Extract to your preferred location
+```
+
+#### 2. Verify Python Installation
+```bash
+# Check Python version
+python --version
+# Should show: Python 3.x.x
+
+# If not installed, download from: https://python.org
+```
+
+#### 3. Run the Application
+```bash
+# Navigate to project directory
+cd expense-tracker
+
+# Run the main file
+python expense_tracker.py
+```
+
+#### 4. First-Time Setup
+- The application automatically creates necessary folders
+- Data file will be generated on first expense addition
+- No additional configuration required!
+
+ ## 🎮 How to Use
+
+### Getting Started
+ 1. Launch the application using the steps above
+ 2. Follow the menu prompts to navigate features
+ 3. Start adding expenses to build your financial history
+
+### Sample Usage Flow
+#### Adding Your First Expense:
+
+```python
+    Welcome to Smart Expense Tracker!
+    ==================================================
+            SMART EXPENSE TRACKER
+    ==================================================
+    1. Add New Expense
+    2. View All Expenses
+    3. View Expenses by Category
+    4. Monthly Summary
+    5. Delete Expense
+    6. Exit
+    ==================================================
+
+    Enter your choice (1-6): 1
+
+    --- Add New Expense ---
+    Enter expense description: College textbooks
+    Enter amount: ₹1200
+
+    Expense Categories:
+    1. Food
+    2. Transport
+    3. Entertainment
+    4. Shopping
+    5. Bills
+    6. Education
+    7. Health
+    8. Other
+
+    Choose category (1-8): 6
+
+    Expense added successfully!
+    College textbooks - ₹1200 - Education
+```
+
+ #### Viewing Monthly Summary:
+```python
+--- Monthly Summary ---
+Month      Total Expenses   Number of Expenses
+--------------------------------------------------
+2024-01    ₹4500.00        8
+2024-02    ₹3800.00        6
+
+Category-wise breakdown for 2024-02:
+Food: ₹1500.00 (39.5%)
+Education: ₹1200.00 (31.6%)
+Transport: ₹800.00 (21.1%)
+Other: ₹300.00 (7.9%)
+
