@@ -210,13 +210,17 @@ python expense_tracker.py
  ## 📸 Application Screenshots
 
 ###  Main Menu
+<img width="567" height="338" alt="Screenshot 2025-11-24 232006" src="https://github.com/user-attachments/assets/d3bda488-e1f5-4fa1-b69c-cf98a35f890f" />
 
+###  Adding Expenses
+<img width="574" height="875" alt="Screenshot 2025-11-24 232028" src="https://github.com/user-attachments/assets/9b4b07c0-4315-4f24-8780-9707c9f103ec" />
+<img width="586" height="813" alt="Screenshot 2025-11-24 232054" src="https://github.com/user-attachments/assets/7679cc3e-4134-4937-906e-1c3c80904435" />
 
 ### Expense Listing
-
+<img width="799" height="563" alt="Screenshot 2025-11-24 232123" src="https://github.com/user-attachments/assets/8888b3b0-4812-428f-be2e-3af1ee9cb702" />
 
 ### Monthly Report
-
+<img width="590" height="675" alt="Screenshot 2025-11-24 232854" src="https://github.com/user-attachments/assets/bf03077c-8ff6-4abe-b306-f9d27981c8e4" />
 
 ## 🐛 Troubleshooting
 
