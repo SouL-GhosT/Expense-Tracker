@@ -1,0 +1,14 @@
+## 📋 requirements.txt
+
+```txt
+# Smart Expense Tracker - Requirements
+# No external libraries needed! Uses only Python built-in modules.
+
+# Required: Python 3.6 or higher
+# Built-in modules used:
+# - json: For data storage
+# - os: For file operations
+# - datetime: For date handling
+
+# This project is designed to run with zero external dependencies
+# Perfect for learning Python fundamentals!
