@@ -19,4 +19,10 @@ Many students struggle with managing their pocket money and daily expenses. Manu
 - **Reliability**: Handles invalid inputs gracefully without crashing
 - **Performance**: Fast response time for all operations
 - **Maintainability**: Clean, well-commented code structure
-    
+
+## 5. System Architecture
+    User Input → ExpenseTracker Class → JSON File Storage
+    ↓ ↓ ↓
+    Menu Business Logic Data Persistence
+    Display Data Processing File Operations 
+
