@@ -45,3 +45,19 @@ The Smart Expense Tracker is a Python-based application designed to help student
 | **Expense Count** | Number of expenses per period | Understand frequency of spending |
 | **Visual Reports** | Formatted tables and percentages | Easy-to-understand insights |
 
+## 🛠️ Technologies & Tools
+
+### 💻 Programming & Frameworks
+| Technology | Purpose | Version |
+|------------|---------|---------|
+| **Python** | Core programming language | 3.6+ |
+| **JSON** | Data storage and persistence | Built-in |
+| **datetime** | Date and time handling | Built-in |
+| **os** | File system operations | Built-in |
+
+## 🎨 Development Tools
+
+  - VS Code - Recommended code editor
+  - Git - Version control
+  - Markdown - Documentation
+
