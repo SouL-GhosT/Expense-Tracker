@@ -13,7 +13,7 @@ A simple and effective expense tracking application built with Python, perfect f
 
 ## 🛠️ Technology Stack
 
-- **Language**: Python 3.x
+- **Language**: Python 3.14
 - **Data Storage**: JSON files
 - **Libraries**: Built-in Python libraries only (json, os, datetime)
 
@@ -32,7 +32,7 @@ A simple and effective expense tracking application built with Python, perfect f
 4. **Run the test file**:
     ```bash
    python test_expense_tracker.py
-   
+
 ## 📖 How to Use
 1. **Adding an Expense**:
     - Choose option 1 from main menu
